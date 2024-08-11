@@ -5,6 +5,13 @@
 
 /* global document, Office */
 
+import { runBackgroundTask } from "../background/background";
+
+Office.onReady(() => {
+  runBackgroundTask();
+});
+
+
 import { getUserProfile } from "../helpers/sso-helper";
 import { filterUserProfileInfo } from "./../helpers/documentHelper";
 
